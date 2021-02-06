@@ -1,7 +1,7 @@
 var mongoose = require("mongoose");
 var {Schema} = mongoose;
 const crypto = require("crypto");
-const uuidv1 = require("uuid/v1");
+const { v4: uuidv1 } = require('uuid');
 
 var userSchema = new Schema(
   {
@@ -22,10 +22,10 @@ var userSchema = new Schema(
       required: true
     },
     salt: String,
-    events: {
-      type: ObjectId,
+    events: [{
+      type: mongoose.Types.ObjectId,
       ref: "Events"
-    }
+    }]
   },
   { timestamps: true }
 );
