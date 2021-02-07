@@ -1,3 +1,5 @@
+@import url('https://fonts.cdnfonts.com/css/sofia-pro');
+
 html,
 body {
   padding: 0;
@@ -13,4 +15,37 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.auth-background{
+  background-image: url('/images/authCover.jpg');
+  background-size: cover;
+}
+
+/* Fonts */
+.sofia{
+  font-family: 'Sofia Pro', sans-serif;    
+}
+
+/* Colors */
+.bg-pink{
+  background-color: #F20574;
+}
+.pink{
+  color: #F20574;
+}
+.grey{
+  color: #9F9F9F;
+}
+
+/* button */
+.auth-button{
+  border: none;
+  font-size: 17px;
+  color: white;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+}
+.auth-button:hover{
+  background-color: #bd1664;
 }
