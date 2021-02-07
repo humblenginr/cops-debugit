@@ -7,7 +7,6 @@ export const handleAuth = (creds, type) =>{
         return;
     }
     if(type == "Signup"){
-        console.log(creds);
         signupCall(creds);
         return;
     }
