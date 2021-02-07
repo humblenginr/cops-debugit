@@ -48,3 +48,16 @@ exports.deleteEvent = (req,res) => {
         res.json({ message: "Event deleted succesfully" });
       });
 }
+exports.updateEvent = (req,res) => {
+    const event = req.event;
+    
+    for(const prop in req.body){
+    event[prop] = req.body[prop];
+    }
+    event.save((err, event) => {
+        if (err || !event) {
+          return res.status(400).json("Failed to update event");
+        }
+        res.json(event);
+      });
+}
