@@ -18,7 +18,3 @@ exports.getUser = (req,res) => {
     profile.encry_password = undefined;
     res.json(profile);
 }
-
-exports.addEvent = (req, res,next) => {
-
-}
