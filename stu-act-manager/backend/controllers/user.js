@@ -13,7 +13,10 @@ exports.getUserById = (req,res,next,id) => {
 }
 
 exports.getUser = (req,res) => {
-    res.json(req.profile);
+    const profile = req.profile;
+    profile.salt = undefined;
+    profile.encry_password = undefined;
+    res.json(profile);
 }
 
 exports.addEvent = (req, res,next) => {
