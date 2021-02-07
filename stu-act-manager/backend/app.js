@@ -9,6 +9,8 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var authRoutes = require('./routes/auth');
+var eventRoutes = require('./routes/event');
+var userRoutes = require('./routes/user');
 
 
 var app = express();
@@ -34,6 +36,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 //Routes 
 app.use('/', indexRouter);
 app.use('/auth',authRoutes)
+app.use('/event',eventRoutes)
+app.use('/user',userRoutes)
 
 
 

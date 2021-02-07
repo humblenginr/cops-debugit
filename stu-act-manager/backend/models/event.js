@@ -4,7 +4,7 @@ var {Schema} = mongoose;
 //Event Schema
 var EventSchema = new Schema({
     user: {
-        type: ObjectId,
+        type: mongoose.Types.ObjectId,
         ref: "User"
     },
     name: {
@@ -14,7 +14,7 @@ var EventSchema = new Schema({
     },
     date: {
         type: Date,
-        required: true
+        // required: true
     },
     link: {
         type: String,

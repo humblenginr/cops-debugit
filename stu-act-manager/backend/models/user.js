@@ -24,7 +24,7 @@ var userSchema = new Schema(
     salt: String,
     events: [{
       type: mongoose.Types.ObjectId,
-      ref: "Events"
+      ref: "Event"
     }]
   },
   { timestamps: true }
