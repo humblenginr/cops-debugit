@@ -1,6 +1,7 @@
 import { axiosInstance } from "../../Utils/axios";
 
 export const signinCall = (creds, setErrors) => {
+  setErrors("");
   axiosInstance
     .post("auth/signin", creds)
     .then((res) => {
@@ -10,6 +11,5 @@ export const signinCall = (creds, setErrors) => {
     .catch((err) => {
       console.log(err);
       setErrors("Invalid credentials");
-
     });
 };

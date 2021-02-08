@@ -49,3 +49,13 @@ a {
 .auth-button:hover{
   background-color: #bd1664;
 }
+
+/* navbar */
+.navbar{
+ width: 90px;
+ height: 100vh;
+ transition: width 0.17s ease-in-out;
+}
+.navbar:hover{
+  width: 250px;
+ }
