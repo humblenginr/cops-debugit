@@ -1,15 +1,20 @@
-import React, { useRef } from "react";
-import { FormControl } from "react-bootstrap";
+import React, { useRef, useState } from "react";
+import { Alert, Form, FormControl } from "react-bootstrap";
 import { AuthButtons } from "../../buttons/AuthButtons";
 import { useRouter } from "next/router";
+import { useForm } from "react-hook-form";
 
 export const AuthForms = ({ heading, btnText }) => {
   const email = useRef();
   const password = useRef();
   const name = useRef();
   const router = useRouter();
+  const [errors,setErrors] = useState("");
+
+
+
   return (
-    <div className="container sofia p-5">
+    <Form  className="container sofia p-5">
       <div className="mb-3" style={{ fontWeight: "bold", fontSize: "50px" }}>
         {heading}
       </div>
@@ -48,8 +53,10 @@ export const AuthForms = ({ heading, btnText }) => {
           password={password}
           name={name}
           tag={btnText}
+          setErrors={setErrors}
         />
       </div>
+      {errors && <Alert className="mt-3" variant="danger">{errors}</Alert>}
       {heading === "Signin" ? (
         <div className="mt-5 grey">
           Dont have an account?
@@ -72,6 +79,7 @@ export const AuthForms = ({ heading, btnText }) => {
           </span>
         </div>
       )}
-    </div>
+      
+    </Form>
   );
 };
