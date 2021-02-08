@@ -55,6 +55,8 @@ a {
  width: 90px;
  height: 100vh;
  transition: width 0.17s ease-in-out;
+ position: absolute;
+ z-index: 100;
 }
 .navbar:hover{
   width: 250px;
