@@ -29,7 +29,7 @@ a {
 
 /* Colors */
 .bg-pink{
-  background-color: #F20574;
+  background-color: #dd458c;
 }
 .pink{
   color: #F20574;
@@ -58,4 +58,12 @@ a {
 }
 .navbar:hover{
   width: 250px;
+ }
+
+ /* Utils */
+ .pointer {
+   cursor: pointer;
+ }
+ .yellow{
+   color: #ebe984;
  }
