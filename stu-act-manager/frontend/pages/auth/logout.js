@@ -1,10 +1,12 @@
-import React from 'react'
+import { useRouter } from 'next/router';
+import React, { useEffect } from 'react'
 
 const logout = () => {
-    return (
-        <div>
-           this is logout page 
-        </div>
-    )
+    const router = useRouter();
+    useEffect(() => {
+        localStorage.removeItem("token");
+        router.push('/auth/signin');
+    },[])
+    return null;
 }
 export default logout;

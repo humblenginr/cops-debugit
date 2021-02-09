@@ -10,7 +10,7 @@ export const AuthButtons = ({ tag, email, password, name, setErrors }) => {
           handleAuth(
             { email: email.current.value, password: password.current.value, name: (tag==="Signup"?name.current.value: null) },
             tag,
-            setErrors
+            setErrors,
           )
         }
         className="px-5 py-3 rounded auth-button container-fluid d-flex justify-content-center bg-pink"
