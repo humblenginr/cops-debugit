@@ -1,7 +1,14 @@
-import React from 'react'
-import { AuthForms } from '../forms/auth/AuthForms'
+import React, { useEffect } from 'react'
+import { useAuthenticate } from '../../Hooks/useAuthenticate'
+import { AuthForms } from '../forms/auth/AuthForms';
+import {useRouter} from "next/router";
 
 export const AuthLayout = ({isSignin}) => {
+    const user = useAuthenticate();
+    const router = useRouter();
+    useEffect(() => {
+        if(user) router.push('/calendar') 
+    },[user])
     return (
         <div className="row vh-100">
             <div className="col-8 auth-background" />            
