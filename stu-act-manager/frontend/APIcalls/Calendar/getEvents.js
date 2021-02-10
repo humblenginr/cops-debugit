@@ -1,8 +1,9 @@
 import { axiosInstance } from "../../Utils/axios"
 
-export async function getEvents(setEvents) {
+export async function getEvents(setEvents,user) {
+  console.log(user);
    try{
-    const response = await axiosInstance.get(`user/601f7f96cb8001e27506a894`);
+    const response = await axiosInstance.get(`user/${user._id}`);
     const formattedEvents = response.data.events.map((event,index) => {
         return {
           Id: index+1,

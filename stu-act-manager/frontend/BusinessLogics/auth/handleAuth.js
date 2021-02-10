@@ -1,9 +1,9 @@
 import { signinCall } from "../../APIcalls/auth/signin";
 import { signupCall } from "../../APIcalls/auth/signup";
 
-export const handleAuth = (creds, type,setErrors) =>{
+export const handleAuth = (creds, type,setErrors,setLoading) =>{
     if(type == "Signin"){
-        signinCall(creds,setErrors);
+        signinCall(creds,setErrors,setLoading);
         return;
     }
     if(type == "Signup"){
