@@ -49,6 +49,7 @@ export const Calendar = () => {
     getEvents(setEvents, user);
   }, [showModal, user, showEditModal]);
   useRefreshEvents([events],scheduler);
+  console.log(events);
 
   return (
     <>
