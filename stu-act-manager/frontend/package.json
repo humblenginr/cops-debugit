@@ -10,9 +10,11 @@
   "dependencies": {
     "@azure/msal-browser": "^2.11.1",
     "@azure/msal-react": "^1.0.0-alpha.5",
+    "@svgr/webpack": "^5.5.0",
     "@syncfusion/ej2-react-schedule": "^18.4.41",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
+    "file-loader": "^6.2.0",
     "moment": "^2.29.1",
     "next": "10.0.6",
     "react": "17.0.1",

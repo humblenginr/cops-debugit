@@ -37,7 +37,10 @@ a {
 .grey{
   color: #9F9F9F;
 }
-
+.lavendar{
+  color: #dd458c;
+  background-color:#deccff;
+}
 /* button */
 .auth-button{
   border: none;

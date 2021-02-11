@@ -14,7 +14,7 @@ export const AuthLayout = ({ isSignin }) => {
       router.push("/calendar");
     }
   }, [user]);
-    // return <SpringLoading />
+    if(isLoading)  return <SpringLoading />
   return (
     <div className="row vh-100">
       <div className="col-8 auth-background" />
