@@ -2,12 +2,17 @@ import React, { useContext, useEffect, useState } from "react";
 import { useAuthenticate } from "../../Hooks/useAuthenticate";
 import { AuthForms } from "../forms/auth/AuthForms";
 import { useRouter } from "next/router";
+import {Spring} from "../loading/Spring"
 
 export const AuthLayout = ({ isSignin }) => {
   const router = useRouter();
   const user = useAuthenticate();
+  const [isLoading,setIsLoading] = useState();
   useEffect(() => {
-    if (user) router.push("/calendar");
+    if (user) {
+      setIsLoading(true);
+      router.push("/calendar");
+    }
   }, [user]);
   return (
     <div className="row vh-100">

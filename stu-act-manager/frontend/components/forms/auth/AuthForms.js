@@ -49,7 +49,6 @@ export const AuthForms = ({ heading, btnText }) => {
       </div>
       <div className="mt-5">
         <AuthButtons
-      
           email={email}
           password={password}
           name={name}

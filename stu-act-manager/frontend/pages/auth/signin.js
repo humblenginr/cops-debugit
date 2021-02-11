@@ -3,7 +3,7 @@ import { AuthLayout } from '../../components/layouts/auth'
 
 const signin = () => {
     return (
-        <AuthLayout isSignin/>
+        <AuthLayout isSignin={true}/>
     )
 }
 

@@ -11,6 +11,7 @@ export const useAuthenticate = () => {
             authorize(JSON.parse(localStorage.token).token)
         }
         else{
+            if(router.pathname.substr(0,5) != "/auth")
             router.push('/auth/signin')
         }
     },[])
