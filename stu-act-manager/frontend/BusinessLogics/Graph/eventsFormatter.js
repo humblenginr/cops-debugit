@@ -1,5 +1,10 @@
 import { getISTTime } from "../../Utils/getIstTime";
 
+/**
+ * 
+ * TODO: RECURRENCE IS NOW SET ONLY FOR DAYS OF WEEK, HAVE TO SET FOR ALL OTHER POSSIBILITIES ALSO
+ */
+
 export const eventsFormatter = (events) => {
     console.log(events);
     const formattedEvents = events.map((event) => {

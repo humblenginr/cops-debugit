@@ -10,17 +10,7 @@ const calendar = () => {
   return (
     <Main>
         <div className="d-flex align-items-center vh-100 border justify-content-center">
-          <AuthenticatedTemplate>
-            <div>Your calendar is synced</div>
-            <Calendar/>
-            <SignInOutButton />
-          </AuthenticatedTemplate>
-          <UnauthenticatedTemplate>
-            <div className="d-flex flex-column">
-            <SignInOutButton />
-          <Calendar/>
-            </div>
-          </UnauthenticatedTemplate>
+          <Calendar />
         </div>
     </Main>
   );

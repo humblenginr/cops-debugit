@@ -8,7 +8,7 @@ export const SignInOutButton = () => {
     return (
         <>
         <UnauthenticatedTemplate>
-        <Button className="ml-5" onClick={() => instance.loginPopup(loginRequest)}>SignIn</Button>
+        <Button className="ml-3" outlined variant="outline-dark" onClick={() => instance.loginPopup(loginRequest)}>SignIn</Button>
         </UnauthenticatedTemplate>
         <AuthenticatedTemplate>
         <Button className="ml-5" onClick={() => instance.logout()}>SignOut</Button>
