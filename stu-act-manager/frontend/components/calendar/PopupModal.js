@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import { Button, FormControl, Modal } from "react-bootstrap";
 import { postEvent } from "../../APIcalls/Calendar/postEvent";
-import {useAuthenticate} from "../../Hooks/useAuthenticate"
 
 export const PopupModal = ({ modal, setModal, args, user}) => {
     const subject = useRef();
@@ -9,7 +8,7 @@ export const PopupModal = ({ modal, setModal, args, user}) => {
     if(args)
     return (
       <Modal show={modal} onHide={() => setModal((prev) => !prev)}>
-          <Modal.Title className="ml-3">Create Event</Modal.Title>
+          <Modal.Title className="p-3">Create Event</Modal.Title>
           <Modal.Body>
           <FormControl ref={subject} className="mb-4" placeholder="Subject(required)"  />
         <FormControl ref={link} placeholder="Links(if any)"  />

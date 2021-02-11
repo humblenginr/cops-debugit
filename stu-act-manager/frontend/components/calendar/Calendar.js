@@ -5,7 +5,6 @@ import {
   Week,
   Month,
   ScheduleComponent,
-  getRecurrenceStringFromDate,
   ViewsDirective,
   ViewDirective,
 } from "@syncfusion/ej2-react-schedule";
@@ -48,43 +47,11 @@ export const Calendar = () => {
   useEffect(() => {
     getEvents(setEvents, user);
   }, [showModal, user, showEditModal]);
-  useRefreshEvents([events],scheduler);
-  console.log(events);
+  useRefreshEvents([events,user],scheduler);
 
   return (
-    <>
-      <UnauthenticatedTemplate>
         <div className="w-75 overflow-auto h-75">
-          {events && (
-            <ScheduleComponent
-              currentView="Month"
-              eventSettings={{ dataSource: events }}
-              ref={scheduler}
-              popupOpen={(args) => {
-                args.cancel = true;
-                setShowModal(true);
-                setArgs(args);
-              }}
-            >
-              <ViewsDirective>
-                <ViewDirective option="Month" />
-                <ViewDirective option="Day" />
-                <ViewDirective option="Week" />
-              </ViewsDirective>
-              <Inject services={[Day, Week, Month]} />
-            </ScheduleComponent>
-          )}
-          <PopupModal
-            modal={showModal}
-            setModal={setShowModal}
-            args={args}
-            user={user}
-          />
-        </div>
-      </UnauthenticatedTemplate>
-      <AuthenticatedTemplate>
-        <div className="w-75 overflow-auto h-75">
-          {events && teamsEvents ? (
+          {events &&
             <ScheduleComponent
               currentView="Month"
               eventSettings={{ dataSource: events }}
@@ -109,7 +76,7 @@ export const Calendar = () => {
               </ViewsDirective>
               <Inject services={[Day, Week, Month]} />
             </ScheduleComponent>
-          ) : null}
+          }
           <PopupModal
             modal={showModal}
             setModal={setShowModal}
@@ -123,7 +90,5 @@ export const Calendar = () => {
             user={user}
           />
         </div>
-      </AuthenticatedTemplate>
-    </>
   );
 };

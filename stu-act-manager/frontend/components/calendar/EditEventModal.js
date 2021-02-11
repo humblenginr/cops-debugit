@@ -10,7 +10,7 @@ export const EditEventModal = ({ modal, setModal, args, user }) => {
   if (args)
     return (
       <Modal show={modal} onHide={() => setModal((prev) => !prev)}>
-        <Modal.Title className="ml-3">Edit Event</Modal.Title>
+        <Modal.Title className=" p-3">Edit Event</Modal.Title>
         <Modal.Body>
           <FormControl
             ref={subject}
