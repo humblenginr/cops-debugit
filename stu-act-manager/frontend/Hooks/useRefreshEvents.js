@@ -5,5 +5,5 @@ export const useRefreshEvents = (dep,scheduler) => {
         if(scheduler.current){
             scheduler.current.refreshEvents()
         }
-    },[dep])
+    },dep)
 }

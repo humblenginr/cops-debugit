@@ -9,6 +9,7 @@ export async function getEvents(setEvents,user) {
           Subject : event.Subject,
           StartTime: new Date(event.StartTime),
           EndTime : new Date(event.EndTime),
+          dbId: event._id
         }
       })
     setEvents(formattedEvents)

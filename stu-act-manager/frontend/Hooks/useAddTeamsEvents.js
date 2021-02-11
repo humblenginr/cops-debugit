@@ -3,7 +3,6 @@ import React, { useEffect } from 'react'
 export const useAddTeamsEvents = (teamsEvents,setEvents,events) => {
     useEffect(() => {
         if(teamsEvents){
-            console.log(teamsEvents);
             setEvents(prev => {
                 const data = prev;
                 const lastElemId = prev[prev.length-1].Id

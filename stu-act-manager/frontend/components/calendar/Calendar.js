@@ -33,19 +33,22 @@ import {
 } from "@azure/msal-react";
 import { Button } from "react-bootstrap";
 import { useRefreshEvents } from "../../Hooks/useRefreshEvents";
+import { EditEventModal } from "./EditEventModal";
 
 export const Calendar = () => {
   const user = useAuthenticate();
   const [events, setEvents] = useState();
   const scheduler = useRef();
   const [showModal, setShowModal] = useState(false);
+  const [showEditModal, setShowEditModal] = useState(false);
   const [args, setArgs] = useState(null);
+  const [editArgs, setEditArgs] = useState(null);
   const teamsEvents = useAcquireEvents();
   useAddTeamsEvents(teamsEvents, setEvents,events);
   useEffect(() => {
     getEvents(setEvents, user);
-  }, [showModal, user]);
-  useRefreshEvents(events,scheduler);
+  }, [showModal, user, showEditModal]);
+  useRefreshEvents([events],scheduler);
 
   return (
     <>
@@ -87,6 +90,13 @@ export const Calendar = () => {
               ref={scheduler}
               popupOpen={(args) => {
                 args.cancel = true;
+              }}
+              eventClick={(args) => {
+                setShowEditModal(true);
+                setEditArgs(args);
+                
+              }}
+              cellClick={(args) => {
                 setShowModal(true);
                 setArgs(args);
               }}
@@ -103,6 +113,12 @@ export const Calendar = () => {
             modal={showModal}
             setModal={setShowModal}
             args={args}
+            user={user}
+          />
+            <EditEventModal
+            modal={showEditModal}
+            setModal={setShowEditModal}
+            args={editArgs}
             user={user}
           />
         </div>

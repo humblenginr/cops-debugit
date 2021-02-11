@@ -6,7 +6,6 @@ import { getISTTime } from "../../Utils/getIstTime";
  */
 
 export const eventsFormatter = (events) => {
-    console.log(events);
     const formattedEvents = events.map((event) => {
         if(event.recurrence)
             {
