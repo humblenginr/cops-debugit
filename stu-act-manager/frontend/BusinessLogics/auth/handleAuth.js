@@ -7,7 +7,7 @@ export const handleAuth = (creds, type,setErrors,setLoading) =>{
         return;
     }
     if(type == "Signup"){
-        signupCall(creds);
+        signupCall(creds,setErrors,setLoading);
         return;
     }
     else{
