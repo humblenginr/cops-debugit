@@ -35,6 +35,7 @@ This is aimed at, </br>
 ## Project Status:
 This project is just in the budding stage :seedling:</br>
 **Assignments,Clubs and Exams** are being coded :technologist:
+</br> It is **not** mobile responsive yet :sweat_smile:
 
 ## Tech Stack
 :sparkles: [ExpressJs(Node JS)](https://expressjs.com) for backend </br>
