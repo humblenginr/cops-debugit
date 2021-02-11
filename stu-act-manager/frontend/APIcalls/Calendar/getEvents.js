@@ -1,7 +1,6 @@
 import { axiosInstance } from "../../Utils/axios"
 
 export async function getEvents(setEvents,user) {
-  console.log(user);
    try{
     const response = await axiosInstance.get(`user/${user._id}`);
     const formattedEvents = response.data.events.map((event,index) => {
@@ -9,7 +8,7 @@ export async function getEvents(setEvents,user) {
           Id: index+1,
           Subject : event.Subject,
           StartTime: new Date(event.StartTime),
-          EndTime : new Date(event.EndTime)
+          EndTime : new Date(event.EndTime),
         }
       })
     setEvents(formattedEvents)

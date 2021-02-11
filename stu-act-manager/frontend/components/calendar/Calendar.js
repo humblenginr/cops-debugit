@@ -5,10 +5,10 @@ import {
   Week,
   Month,
   ScheduleComponent,
+  getRecurrenceStringFromDate
 } from "@syncfusion/ej2-react-schedule";
-import { DataManager, WebApiAdaptor } from "@syncfusion/ej2-data";
 import { getEvents } from "../../APIcalls/Calendar/getEvents";
-import {useAuthenticate} from "../../Hooks/useAuthenticate"
+import { useAuthenticate } from "../../Hooks/useAuthenticate";
 
 //style imports for calendar
 import "@syncfusion/ej2-base/styles/material.css";
@@ -23,36 +23,77 @@ import "@syncfusion/ej2-dropdowns/styles/material.css";
 import "@syncfusion/ej2-splitbuttons/styles/material.css";
 import "@syncfusion/ej2-popups/styles/material.css";
 import { PopupModal } from "./PopupModal";
+import { useAcquireEvents } from "../../Hooks/useAcquireEvents";
+import { useAddTeamsEvents } from "../../Hooks/useAddTeamsEvents";
+import {
+  AuthenticatedTemplate,
+  UnauthenticatedTemplate,
+} from "@azure/msal-react";
 
 export const Calendar = () => {
   const user = useAuthenticate();
   const [events, setEvents] = useState();
   const scheduler = useRef();
-  const [showModal,setShowModal] = useState(false);
-  const [args,setArgs] = useState(null);
+  const [showModal, setShowModal] = useState(false);
+  const [args, setArgs] = useState(null);
+  const teamsEvents = useAcquireEvents();
+  useAddTeamsEvents(teamsEvents, setEvents);
   useEffect(() => {
-    getEvents(setEvents,user);
-  }, [showModal,user]);
-  return (
-    <div className="w-75 overflow-auto h-75">
+    getEvents(setEvents, user);
+  }, [showModal, user]);
 
-      {events && (
-        <ScheduleComponent
-          currentView="Month"
-          eventSettings={{ dataSource: events }}
-          ref={scheduler}
-          popupOpen={(args) => {
-            console.log("open");
-            args.cancel = true;
-            setShowModal(true);
-            setArgs(args)
-          }}
-        >
-          <Inject services={[Day, Week, Month]} />
-        </ScheduleComponent>
-      )}
-      <PopupModal modal={showModal} setModal={setShowModal} args={args} user={user}/>
-    </div>
+
+
+  return (
+    <>
+      <UnauthenticatedTemplate>
+        <div className="w-75 overflow-auto h-75">
+          {events && (
+            <ScheduleComponent
+              currentView="Month"
+              eventSettings={{ dataSource: events }}
+              ref={scheduler}
+              popupOpen={(args) => {
+                args.cancel = true;
+                setShowModal(true);
+                setArgs(args);
+              }}
+            >
+              <Inject services={[Day, Week, Month]} />
+            </ScheduleComponent>
+          )}
+          <PopupModal
+            modal={showModal}
+            setModal={setShowModal}
+            args={args}
+            user={user}
+          />
+        </div>
+      </UnauthenticatedTemplate>
+      <AuthenticatedTemplate>
+        <div className="w-75 overflow-auto h-75">
+          {events && teamsEvents ? (
+            <ScheduleComponent
+              currentView="Month"
+              eventSettings={{ dataSource: events }}
+              ref={scheduler}
+              popupOpen={(args) => {
+                args.cancel = true;
+                setShowModal(true);
+                setArgs(args);
+              }}
+            >
+              <Inject services={[Day, Week, Month]} />
+            </ScheduleComponent>
+          ) : null}
+          <PopupModal
+            modal={showModal}
+            setModal={setShowModal}
+            args={args}
+            user={user}
+          />
+        </div>
+      </AuthenticatedTemplate>
+    </>
   );
 };
-

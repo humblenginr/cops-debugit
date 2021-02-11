@@ -8,6 +8,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@azure/msal-browser": "^2.11.1",
+    "@azure/msal-react": "^1.0.0-alpha.5",
     "@syncfusion/ej2-react-schedule": "^18.4.41",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
