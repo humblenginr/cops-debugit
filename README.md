@@ -37,12 +37,12 @@ This project is just in the budding stage :seedling:</br>
 **Assignments,Clubs and Exams** are being coded :technologist:
 
 ## Tech Stack
-:sparkles: [ExpressJs(Node JS)](www.expressjs.com) for backend </br>
+:sparkles: [ExpressJs(Node JS)](https://expressjs.com) for backend </br>
 :boom: [NextJs](www.nextjs.org) for frontend </br>
-:key: [JWT](www.jwt.io) for authentication </br>
-:rainbow: [Bootstrap](www.getbootstrap.com) for styling </br>
-:briefcase: [MongoDB](www.mongodb.com) as Database </br>
-:balloon: [React-Spring](www.react-spring.io) for animation
+:key: [JWT](https://jwt.io) for authentication </br>
+:rainbow: [Bootstrap](https://getbootstrap.com) for styling </br>
+:briefcase: [MongoDB](https://www.mongodb.com) as Database </br>
+:balloon: [React-Spring](https://www.react-spring.io) for animation
 
 ## The Journey
 I was very determined that i should finish this whole project. But guess what,i am writing this one day before the deadline and i have just completed the calendar functionality :rofl: </br>I now realize that this project needs a lot of attention because each and every minute thing has to taken care of :sweat_smile: </br> As i was doing the project, i would find that i would've missed some small details which i've not taken into account but plays an important role and i would spend time doing that :sweat:. And also, never to miss, there are bugs :bug: :bug: :bug: that you have to fix :sweat_smile:.</br> 
