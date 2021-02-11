@@ -40,5 +40,4 @@ app.use('/event',eventRoutes)
 app.use('/user',userRoutes)
 
 
-
 module.exports = app;

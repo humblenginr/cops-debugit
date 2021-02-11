@@ -7,12 +7,16 @@ var EventSchema = new Schema({
         type: mongoose.Types.ObjectId,
         ref: "User"
     },
-    name: {
+    Subject: {
         type: String,
         required:true,
         maxlength: 52,
     },
-    date: {
+    StartTime: {
+        type: Date,
+        // required: true
+    },
+    EndTime: {
         type: Date,
         // required: true
     },

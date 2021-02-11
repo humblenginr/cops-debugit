@@ -12,7 +12,7 @@ router.param('eventId',getEventById);
 
 router.post('/create/:userId',isSignedIn,isAuthenticated,createEvent)
 router.delete('/delete/:userId/:eventId',isSignedIn,isAuthenticated,deleteEvent)
-router.put('/delete/:userId/:eventId',isSignedIn,isAuthenticated,updateEvent)
+router.put('/update/:userId/:eventId',isSignedIn,isAuthenticated,updateEvent)
 
 
 
