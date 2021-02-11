@@ -5,7 +5,9 @@ import {
   Week,
   Month,
   ScheduleComponent,
-  getRecurrenceStringFromDate
+  getRecurrenceStringFromDate,
+  ViewsDirective,
+  ViewDirective,
 } from "@syncfusion/ej2-react-schedule";
 import { getEvents } from "../../APIcalls/Calendar/getEvents";
 import { useAuthenticate } from "../../Hooks/useAuthenticate";
@@ -29,6 +31,8 @@ import {
   AuthenticatedTemplate,
   UnauthenticatedTemplate,
 } from "@azure/msal-react";
+import { Button } from "react-bootstrap";
+import { useRefreshEvents } from "../../Hooks/useRefreshEvents";
 
 export const Calendar = () => {
   const user = useAuthenticate();
@@ -37,12 +41,11 @@ export const Calendar = () => {
   const [showModal, setShowModal] = useState(false);
   const [args, setArgs] = useState(null);
   const teamsEvents = useAcquireEvents();
-  useAddTeamsEvents(teamsEvents, setEvents);
+  useAddTeamsEvents(teamsEvents, setEvents,events);
   useEffect(() => {
     getEvents(setEvents, user);
   }, [showModal, user]);
-
-
+  useRefreshEvents(events,scheduler);
 
   return (
     <>
@@ -59,6 +62,11 @@ export const Calendar = () => {
                 setArgs(args);
               }}
             >
+              <ViewsDirective>
+                <ViewDirective option="Month" />
+                <ViewDirective option="Day" />
+                <ViewDirective option="Week" />
+              </ViewsDirective>
               <Inject services={[Day, Week, Month]} />
             </ScheduleComponent>
           )}
@@ -83,6 +91,11 @@ export const Calendar = () => {
                 setArgs(args);
               }}
             >
+              <ViewsDirective>
+                <ViewDirective option="Month" />
+                <ViewDirective option="Day" />
+                <ViewDirective option="Week" />
+              </ViewsDirective>
               <Inject services={[Day, Week, Month]} />
             </ScheduleComponent>
           ) : null}

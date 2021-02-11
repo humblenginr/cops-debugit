@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 
-export const useAddTeamsEvents = (teamsEvents,setEvents) => {
+export const useAddTeamsEvents = (teamsEvents,setEvents,events) => {
     useEffect(() => {
         if(teamsEvents){
             console.log(teamsEvents);
@@ -14,5 +14,5 @@ export const useAddTeamsEvents = (teamsEvents,setEvents) => {
                 return data;
             })
         }
-    },[teamsEvents])
+    },[teamsEvents,events])
 }
