@@ -68,7 +68,8 @@ This project is just in the budding stage :seedling:</br>
 :key: [JWT](https://jwt.io) for authentication </br>
 :rainbow: [Bootstrap](https://getbootstrap.com) for styling </br>
 :briefcase: [MongoDB](https://www.mongodb.com) as Database </br>
-:balloon: [React-Spring](https://www.react-spring.io) for animation
+:balloon: [React-Spring](https://www.react-spring.io) for animation </br>
+:floppy_disk: [Microsoft Graph](https://developer.microsoft.com/en-us/graph)
 
 ## The Journey
 I was very determined that i should finish this whole project. But guess what,i am writing this one day before the deadline and i have just completed the calendar functionality :rofl: </br>I now realize that this project needs a lot of attention because each and every minute thing has to taken care of :sweat_smile: </br> As i was doing the project, i would find that i would've missed some small details which i've not taken into account but plays an important role and i would spend time doing that :sweat:. And also, never to miss, there are bugs :bug: :bug: :bug: that you have to fix :sweat_smile:.</br> 
