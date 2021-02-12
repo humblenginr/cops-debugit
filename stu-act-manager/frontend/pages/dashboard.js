@@ -1,5 +1,5 @@
 import React from 'react'
-import { UnderConstruction } from '../components/intermediateStates/underConstruction';
+import { UnderConstruction } from '../components/intermediateStates/UnderConstruction';
 import { Main } from '../components/layouts/Main';
 
  const dashboard = () => {
