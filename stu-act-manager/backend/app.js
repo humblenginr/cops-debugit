@@ -32,7 +32,6 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 
 //Routes 
 app.use('/', indexRouter);
@@ -44,6 +43,10 @@ app.use('/user',userRoutes)
 app.listen(PORT,() => {
   console.log(`Server is up and running on ${PORT}`);
 } )
+
+if(process.env.NODE_ENV === 'production'){
+  app.use(express.static('../frontend/.next'));
+}
 
 
 
