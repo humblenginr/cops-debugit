@@ -5,6 +5,9 @@ As the students of a premier institute, we all have a lot of things to manage. B
 ## What are it's objectives?
 I brainstormed for almost a day :sweat_smile: and came up with some functionalities that this product should offer. These ideas have come up keeping students of *IIT BHU* as the potential target.
 
+## Short Demo
+This [video](https://drive.google.com/file/d/1qN5knG3NhjhoYPUPzI5_aoDfZ119TUlc/view?usp=sharing) shows how the calendar works for now!
+
 ### Functionalities
 - [x] Calendar
 - [ ] Assignments
