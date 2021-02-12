@@ -1,4 +1,25 @@
-## Deployed at http://cops-debugit.vercel.app/
+# Table of Contents
+1. [Deployed at](#deployed-at)
+2. [Why this project](#why-this-project)
+3. [Objectives](#what-are-its-objectives)
+4. [Demo](#short-demo)
+5. [Functionalities](#functionalities)
+    1.   [Calendar](#calendar)
+    2.   [Assignments](#assignments)
+    3. [Clubs](#clubs)
+    4. [Exams](#exams)
+6. [Project Status](#project-status)
+7. [Tech Stack](#tech-stack)
+8. [The Journey](#the-journey)
+9. [Thanks](#note-of-thanks)
+10. [Contribute](#contribute)
+
+
+
+
+
+## Deployed at
+ http://cops-debugit.vercel.app/
 ## Why this project?
 As the students of a premier institute, we all have a lot of things to manage. But we only have a limited amount of **time** with which we are striving to bring the best out of us! Ofc we can't do anthing with time as it keeps on ticking :stopwatch:, but we can take care of the energy that we spend on our day to day activities and try to refine them :sunglasses:. I thought, if i can create a platform where we can manage all our activities at one place, we would efffectively save a lot of time switching from one platform to other :bulb:. This project is just an effort in that direction :rainbow:.
 
@@ -21,7 +42,7 @@ The main objective of the calendar is to </br>
 :point_right:  Linking the calendar with the person's Teams calendar (Outlook Calendar) </br>
 :point_right:  Making it different from other calendars :wink: </br>
 
-#### Assigments
+#### Assignments
 Objectives of this functionality is, </br>
 :point_right:  Listing all the assignments with *deadline*. (Sources are **Microsoft Teams** and **Google Classroom** )
 
