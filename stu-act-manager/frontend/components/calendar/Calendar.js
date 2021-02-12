@@ -45,6 +45,7 @@ export const Calendar = () => {
   useRefreshEvents([events,user,teamsEvents],scheduler);
 
   return (
+    
         <div className="w-75 overflow-auto h-75">
           {events &&
             <ScheduleComponent
@@ -55,13 +56,15 @@ export const Calendar = () => {
                 args.cancel = true;
               }}
               eventClick={(args) => {
-                setShowEditModal(true);
                 setEditArgs(args);
+                setShowEditModal(true);
+                
                 
               }}
               cellClick={(args) => {
-                setShowModal(true);
                 setArgs(args);
+                setShowModal(true);
+                
               }}
             >
               <ViewsDirective>
