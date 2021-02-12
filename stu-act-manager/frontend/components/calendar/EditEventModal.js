@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import { Button, FormControl, Modal } from "react-bootstrap";
 import { deleteEvent } from "../../APIcalls/Calendar/deleteEvent";
-import { postEvent } from "../../APIcalls/Calendar/postEvent";
 import { putEvent } from "../../APIcalls/Calendar/putEvent";
 
 export const EditEventModal = ({ modal, setModal, args, user }) => {

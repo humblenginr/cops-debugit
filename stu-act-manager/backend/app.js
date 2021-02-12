@@ -14,6 +14,7 @@ var userRoutes = require('./routes/user');
 
 
 var app = express();
+const port = process.env.PORT || 3000
 var mongoose = require('mongoose');
 
 //Connecting to DATABASE
@@ -38,6 +39,9 @@ app.use('/', indexRouter);
 app.use('/auth',authRoutes)
 app.use('/event',eventRoutes)
 app.use('/user',userRoutes)
+
+//Listen 
+app.listen(port, console.log(`Server is starting at port ${port}`));
 
 
 module.exports = app;
