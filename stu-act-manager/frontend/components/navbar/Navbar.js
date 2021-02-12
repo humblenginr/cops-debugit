@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { GiCalendar } from "react-icons/gi";
 import { MdAssignment } from "react-icons/md";
 import { TiGroup } from "react-icons/ti";
@@ -14,6 +14,9 @@ import {useRouter} from "next/router";
 export const Navbar = () => {
     const router = useRouter();
   const [active,setActive] = useLocalStorage("navLink",String(router.pathname.substr(1)));
+  useEffect(() => {
+    return () => localStorage.removeItem("navLink");
+  },[])
   
   return (
     <div className="bg-pink navbar overflow-hidden">

@@ -26,11 +26,6 @@ import "@syncfusion/ej2-popups/styles/material.css";
 import { PopupModal } from "./PopupModal";
 import { useAcquireEvents } from "../../Hooks/useAcquireEvents";
 import { useAddTeamsEvents } from "../../Hooks/useAddTeamsEvents";
-import {
-  AuthenticatedTemplate,
-  UnauthenticatedTemplate,
-} from "@azure/msal-react";
-import { Button } from "react-bootstrap";
 import { useRefreshEvents } from "../../Hooks/useRefreshEvents";
 import { EditEventModal } from "./EditEventModal";
 
@@ -47,7 +42,7 @@ export const Calendar = () => {
   useEffect(() => {
     getEvents(setEvents, user);
   }, [showModal, user, showEditModal]);
-  useRefreshEvents([events,user],scheduler);
+  useRefreshEvents([events,user,teamsEvents],scheduler);
 
   return (
         <div className="w-75 overflow-auto h-75">
