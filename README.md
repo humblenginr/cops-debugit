@@ -32,7 +32,7 @@ This is aimed at, </br>
 :point_right: Listing all the updates about upcoming exams and assignments. </br>
 :point_right:  The idea :bulb: here is to use *Google API* and fetch emails from the institute using some sort of filter and to use [*Tagtog*](https://www.tagtog.net) to extract information like timing and other stuff.
 
-## Project Status:
+## Project Status
 This project is just in the budding stage :seedling:</br>
 **Assignments,Clubs and Exams** are being coded :technologist:
 </br> It is **not** mobile responsive yet :sweat_smile:
