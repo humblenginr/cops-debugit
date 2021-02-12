@@ -3,7 +3,7 @@ require('dotenv').config();
 var express = require('express');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+var cors = require('cors');
 //Route imports
 
 var indexRouter = require('./routes/index');
@@ -27,6 +27,7 @@ mongoose.connect(process.env.DATABASE, {
 
 
 //Middlewares
+app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -42,10 +43,6 @@ app.use('/user',userRoutes)
 app.listen(PORT,() => {
   console.log(`Server is up and running on ${PORT}`);
 } )
-
-if(process.env.NODE_ENV === 'production'){
-  app.use(express.static('../frontend/.next'));
-}
 
 
 
