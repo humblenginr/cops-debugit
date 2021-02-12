@@ -8,7 +8,6 @@
    * [Assignments](#assignments)
    * [Clubs](#clubs)
    * [Exams](#exams)
-   </br>
 6. [Project Status](#project-status)
 7. [Tech Stack](#tech-stack)
 8. [The Journey](#the-journey)
@@ -26,9 +25,6 @@ As the students of a premier institute, we all have a lot of things to manage. B
 
 ## What are it's objectives?
 I brainstormed for almost a day :sweat_smile: and came up with some functionalities that this product should offer. These ideas have come up keeping students of *IIT BHU* as the potential target.
-
-## Short Demo
-This [video](https://drive.google.com/file/d/1qN5knG3NhjhoYPUPzI5_aoDfZ119TUlc/view?usp=sharing) shows how the calendar works for now!
 
 ### Functionalities
 - [x] Calendar
@@ -56,6 +52,10 @@ This is programmed to,  </br>
 This is aimed at, </br>
 :point_right: Listing all the updates about upcoming exams and assignments. </br>
 :point_right:  The idea :bulb: here is to use *Google API* and fetch emails from the institute using some sort of filter and to use [*Tagtog*](https://www.tagtog.net) to extract information like timing and other stuff.
+
+
+## Short Demo
+This [video](https://drive.google.com/file/d/1qN5knG3NhjhoYPUPzI5_aoDfZ119TUlc/view?usp=sharing) shows how the calendar works for now!
 
 ## Project Status
 This project is just in the budding stage :seedling:</br>
